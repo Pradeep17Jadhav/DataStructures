@@ -6,6 +6,15 @@ struct Node {
     struct Node *next;
 };
 
+void Traverse(struct Node *ptr)
+{
+    while(ptr != NULL)
+    {
+        printf("Element is:%d\n", ptr -> data);
+        ptr = ptr -> next;
+    }
+}
+
 int main()
 {
     struct Node *head;
@@ -30,5 +39,6 @@ int main()
     third -> data = 40;
     third -> next = NULL;
 
+    Traverse(head);
     return 0;
 }
